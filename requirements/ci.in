@@ -13,4 +13,4 @@ pytest-cov
 typeguard
 PyYAML
 types-PyYAML
-fonttools<=4.61.0 # For older py version 3.9
+#fonttools<=4.60.2 # only take this for 3.9
