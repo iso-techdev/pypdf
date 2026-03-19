@@ -509,7 +509,7 @@ def test_embedded_file__create__kids_based_name_tree() -> None:
         "factur-x.xml",
         attachments[0].pdf_object.indirect_reference,
         "test.pdf",
-        attachments[1].pdf_object.indirect_reference,
+        attachments[1].pdf_object.indirect_reference
     ]
 
 
@@ -555,7 +555,7 @@ def test_embedded_file__get_insertion_index() -> None:
     ) == 0
     assert EmbeddedFile._get_insertion_index(
         ArrayObject([TextStringObject("aaa.txt"), NullObject(), TextStringObject("bbb.txt"), NullObject()]),
-        "test.txt",
+        "test.txt"
     ) == 4
     assert EmbeddedFile._get_insertion_index(
         ArrayObject([
@@ -563,7 +563,7 @@ def test_embedded_file__get_insertion_index() -> None:
             TextStringObject("test.txt"), NullObject(),
             TextStringObject("zzz.txt"), NullObject(),
         ]),
-        "test.txt",
+        "test.txt"
     ) == 4
 
     # Length.
@@ -602,7 +602,7 @@ def test_embedded_file__order() -> None:
     assert dict(writer.attachments) == {
         "abc.txt": [b"content"],
         "test.txt": [b"content", b"content2"],
-        "xyz.txt": [b"content"],
+        "xyz.txt": [b"content"]
     }
     names = writer.root_object["/Names"]
     assert isinstance(names, DictionaryObject)
